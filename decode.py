@@ -42,6 +42,7 @@ def demosaic(image, extension, output="results"):
             (channel_image * 255).astype(np.uint8)
         )
 
+    # Filter references: https://www.dmi.unict.it/~battiato/EI_MOBILE0708/Color%20interpolation%20(Guarnera).pdf, page 12-13.
     red_blue_interpolation = np.array(
         [[1, 2, 1],
          [2, 4, 2],
